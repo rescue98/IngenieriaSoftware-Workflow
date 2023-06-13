@@ -1,5 +1,8 @@
 package com.example.Tarea4_Isoft.Service;
+import org.springframework.stereotype.Service;
+
 import java.util.regex.Pattern;
+@Service
 public class UsuarioService {
 
         public boolean validarNombre(String nombre) {
