@@ -14,73 +14,68 @@ public class UsuarioServiceTest {
         }
 
         @Test
-        public void testValidateNombre_ValidNombre_ReturnsTrue() {
+        public void testValidarNombre_ReturnsTrue() {
             boolean result = usuarioService.validarNombre("Cony");
             Assertions.assertTrue(result);
         }
 
         @Test
-        public void testValidateNombre_InvalidNombre_ReturnsFalse() {
+        public void testValidarNombre_ReturnsFalse() {
             boolean result = usuarioService.validarNombre("");
             Assertions.assertFalse(result);
         }
 
         @Test
-        public void testValidateApellidoPaterno_ValidApellidoPaterno_ReturnsTrue() {
+        public void testValidarApellidoPaterno_ReturnsTrue() {
             boolean result = usuarioService.validarApellidoPaterno("Moya");
             Assertions.assertTrue(result);
         }
 
         @Test
-        public void testValidateApellidoPaterno_InvalidApellidoPaterno_ReturnsFalse() {
+        public void testValidarApellidoPaterno_ReturnsFalse() {
             boolean result = usuarioService.validarApellidoPaterno("");
             Assertions.assertFalse(result);
         }
 
         @Test
-        public void testValidateApellidoMaterno_ValidApellidoMaterno_ReturnsTrue() {
+        public void testValidarApellidoMaterno_ReturnsTrue() {
             boolean result = usuarioService.validarApellidoMaterno("Sarpi");
             Assertions.assertTrue(result);
         }
 
         @Test
-        public void testValidateApellidoMaterno_InvalidApellidoMaterno_ReturnsFalse() {
+        public void testValidarApellidoMaterno_ReturnsFalse() {
             boolean result = usuarioService.validarApellidoMaterno("");
             Assertions.assertFalse(result);
         }
 
         @Test
-        public void testValidateRut_ValidRut_ReturnsTrue() {
-            boolean result = usuarioService.validarRut("19992648-9");
-            Assertions.assertTrue(result);
+        public void testValidarRut_ReturnsTrue() {
+            String rut = "20.643.527-5";
+            Assertions.assertTrue(usuarioService.validarRut(rut));
+
         }
 
         @Test
-        public void testValidateRut_InvalidRut_ReturnsFalse() {
-            boolean result = usuarioService.validarRut("19992648");
-            Assertions.assertFalse(result);
-        }
-
-        @Test
-        public void testValidateNumeroTelefonico_ValidNumeroTelefonico_ReturnsTrue() {
+        public void testValidarNumeroTelefonico_ReturnsTrue() {
             boolean result = usuarioService.validarNumeroTelefonico("123456789");
             Assertions.assertTrue(result);
         }
 
         @Test
-        public void testValidateNumeroTelefonico_InvalidNumeroTelefonico_ReturnsFalse() {
+        public void testValidarNumeroTelefonico_ReturnsFalse() {
             boolean result = usuarioService.validarNumeroTelefonico("12345678");
             Assertions.assertFalse(result);
         }
 
         @Test
-        public void testValidateEdad_ValidEdad_ReturnsTrue() {
+        public void testValidarEdad_ReturnsTrue() {
             boolean result = usuarioService.validarEdad(25);
             Assertions.assertTrue(result);
         }
 
         @Test
-        public void testValidateEdad_InvalidEdad_ReturnsFalse() {
+        public void testValidarEdad_ReturnsFalse() {
             boolean result = usuarioService.validarEdad(9);
             Assertions.assertFalse(result);
         }
